@@ -25,11 +25,11 @@ Add Backpack To Cart
     Cart Should Contain    1    $ 29.99
 
 Cart Should Contain
-    [Arguments]    ${quantity}    ${total}
+    [Arguments]    ${expected_quantity}    ${expected_total}
     Wait Until Page Contains Element    ${TOTAL}
-    Element Text Should Be    ${QUANTITY}    ${quantity}
-    Element Text Should Be    ${TOTAL}    ${total}
-    Element Text Should Be    id=%{APP_PACKAGE}:id/itemsTV    ${quantity} Items
+    Element Text Should Be    ${QUANTITY}    ${expected_quantity}
+    Element Text Should Be    ${TOTAL}    ${expected_total}
+    Element Text Should Be    id=%{APP_PACKAGE}:id/itemsTV    ${expected_quantity} Items
 
 Cart Should Be Empty
     Wait Until Page Contains    No Items
