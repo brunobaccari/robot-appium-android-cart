@@ -47,4 +47,4 @@ Appium binds only to localhost. Each test clears application data in a new sessi
 
 Incorrect totals/state, skipped cases or missing JUnit fail the run. Inspect the original failed keyword and screenshot before changing expectations. No automatic rerun-until-green. `--dryrun` checks structure only.
 
-Android only, one emulator and the pinned official APK. No iOS, physical-device, real-payment or complete-coverage claim. Tooling transitive dependencies may have audit warnings; never expose the local Appium server to the network.
+Android only, one emulator and the pinned official APK. No iOS, physical-device, real-payment or complete-coverage claim. The npm audit on 2026-10-06 reported 12 affected dependencies (7 critical, 4 high and 1 moderate) in the tooling. Some are bundled inside UiAutomator2 or pinned by Appium; the version changes suggested by `npm audit fix --force` were not applied. A compatible update and another execution remain pending. The server only listens on localhost; restricting access does not fix those vulnerabilities.
