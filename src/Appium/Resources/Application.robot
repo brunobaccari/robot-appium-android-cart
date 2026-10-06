@@ -16,7 +16,7 @@ Open Demo App
     ...    appium:appWaitActivity=com.saucelabs.mydemoapp.android.view.activities.MainActivity
     ...    appium:noReset=${False}
     ...    appium:autoGrantPermissions=${True}
-    ...    appium:newCommandTimeout=120
+    ...    appium:newCommandTimeout=${120}
     Wait Until Page Contains Element    id=%{APP_PACKAGE}:id/productIV    60s
 
 Close Demo App

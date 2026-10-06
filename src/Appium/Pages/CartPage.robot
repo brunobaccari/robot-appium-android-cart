@@ -13,6 +13,8 @@ Open Backpack
     Click Element    ${PRODUCT_IMAGE}
     Wait Until Page Contains Element    ${PRODUCT_NAME}
     Element Text Should Be    ${PRODUCT_NAME}    Sauce Labs Backpack
+    Get Webelement    android=new UiScrollable(new UiSelector().scrollable(true)).setMaxSearchSwipes(5).scrollIntoView(new UiSelector().resourceId("%{APP_PACKAGE}:id/cartBt"))
+    Wait Until Page Contains Element    ${ADD_TO_CART}
 
 Add Backpack To Cart
     Open Backpack
