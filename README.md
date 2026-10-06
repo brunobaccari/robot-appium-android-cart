@@ -23,8 +23,10 @@ cp .env.example .env
 python -m venv .venv
 python -m pip install -r requirements.txt
 npm ci
-npx appium driver install --source=npm appium-uiautomator2-driver@8.7.0
+npx appium driver list --installed
 ```
+
+O UiAutomator2 é instalado pelo `npm ci` a partir do lockfile. A listagem acima confirma o driver; não é preciso instalá-lo novamente.
 
 Ative a `.venv` antes de instalar Python: `.venv\Scripts\activate` no Windows ou `source .venv/bin/activate` no Linux. No PowerShell use `Copy-Item .env.example .env`. Baixe o APK da release oficial para o `APP_PATH` definido no `.env` e ajuste `ANDROID_DEVICE` ao resultado de `adb devices`.
 

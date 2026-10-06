@@ -30,9 +30,9 @@ jobs:
           java-version: '21'
       - run: npm ci
       - run: python -m pip install -r requirements.txt
-      - name: Instalar driver e baixar app oficial
+      - name: Verificar driver e baixar app oficial
         run: |
-          npx appium driver install --source=npm appium-uiautomator2-driver@8.7.0
+          npx appium driver list --installed
           python - <<'PY'
           from dotenv import load_dotenv
           from pathlib import Path

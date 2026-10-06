@@ -28,8 +28,10 @@ Activate with `.venv\Scripts\activate` on Windows or `source .venv/bin/activate`
 ```bash
 python -m pip install -r requirements.txt
 npm ci
-npx appium driver install --source=npm appium-uiautomator2-driver@8.7.0
+npx appium driver list --installed
 ```
+
+UiAutomator2 is installed by `npm ci` from the lockfile. The command above confirms the driver; a second installation is unnecessary.
 
 PowerShell uses `Copy-Item .env.example .env`. Download the official APK to `APP_PATH` and set `ANDROID_DEVICE` from `adb devices`. Start `npm run appium` in one terminal, then:
 
