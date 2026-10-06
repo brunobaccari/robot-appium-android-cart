@@ -19,7 +19,7 @@ Keep Cart After Background
     Click Element    ${PLUS}
     Cart Should Contain    2    $ 59.98
     Press Keycode    3
-    Expect Element    ${TOTAL}    not visible    timeout=10s
+    Wait Until Page Does Not Contain Element    ${TOTAL}    10s
     Activate Application    %{APP_PACKAGE}
     Cart Should Contain    2    $ 59.98
 

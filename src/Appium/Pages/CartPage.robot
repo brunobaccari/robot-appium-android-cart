@@ -27,7 +27,7 @@ Cart Should Contain
     Wait Until Page Contains Element    ${TOTAL}
     Element Text Should Be    ${QUANTITY}    ${quantity}
     Element Text Should Be    ${TOTAL}    ${total}
-    Element Text Should Be    id=%{APP_PACKAGE}:id/itemsTV    ${quantity} items
+    Element Text Should Be    id=%{APP_PACKAGE}:id/itemsTV    ${quantity} Items
 
 Cart Should Be Empty
     Wait Until Page Contains    No Items
