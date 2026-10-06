@@ -13,6 +13,7 @@ Open Demo App
     ...    appium:app=${app}
     ...    appium:appPackage=%{APP_PACKAGE}
     ...    appium:appActivity=com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+    ...    appium:appWaitActivity=com.saucelabs.mydemoapp.android.view.activities.MainActivity
     ...    appium:noReset=${False}
     ...    appium:autoGrantPermissions=${True}
     ...    appium:newCommandTimeout=120
