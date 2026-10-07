@@ -45,3 +45,5 @@ O Appium escuta somente em localhost. Cada teste abre uma sessão com limpeza do
 Falha de quantidade/total, estado incorreto, caso ignorado ou JUnit ausente bloqueia a run. Não há repetição automática até passar. Confira screenshot e keyword original antes de alterar um locator ou expectativa. `--dryrun` verifica somente a estrutura, não o aplicativo.
 
 Escopo: Android, um dispositivo virtual e o APK oficial indicado. Sem iOS, dispositivo físico, pagamento real ou promessa de cobertura completa. A auditoria npm de 06/10/2026 apontou 12 dependências afetadas (7 críticas, 4 altas e 1 moderada) nas ferramentas. Há dependências empacotadas no UiAutomator2 e versões fixadas pelo Appium; não foi aplicada a troca de versões sugerida por `npm audit fix --force`. Isso permanece pendente de atualização compatível e nova execução. O servidor escuta somente em localhost; esse limite de acesso não equivale a corrigir as vulnerabilidades.
+
+O summary do Actions lista cada cenário, duração, totais e motivo de bloqueio. O gate exige a quantidade prevista no workflow, sem falhas ou skips; JUnit ausente ou inválido reprova. O resumo também acompanha o artifact.
