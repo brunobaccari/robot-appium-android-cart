@@ -50,3 +50,5 @@ Incorrect totals/state, skipped cases or missing JUnit fail the run. Inspect the
 Android only, one emulator and the pinned official APK. No iOS, physical-device, real-payment or complete-coverage claim. The npm audit on 2026-10-06 reported 12 affected dependencies (7 critical, 4 high and 1 moderate) in the tooling. Some are bundled inside UiAutomator2 or pinned by Appium; the version changes suggested by `npm audit fix --force` were not applied. A compatible update and another execution remain pending. The server only listens on localhost; restricting access does not fix those vulnerabilities.
 
 The Actions summary lists every scenario, duration, totals and blocking reason. The gate requires the count configured in the workflow, with no failures or skips; missing or invalid JUnit fails the gate. The summary is also included in the artifact.
+
+Husky: with Node 24 and the stack dependencies installed, run `npm ci` to enable pre-commit. `npm run check:local` checks the diff, report gate and existing type/lint checks. The hook also rejects ignored files in the index. Browser, emulator and API tests remain in CI.

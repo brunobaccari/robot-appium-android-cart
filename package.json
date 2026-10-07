@@ -2,6 +2,14 @@
   "name": "robot-appium-android-cart",
   "version": "1.0.0",
   "private": true,
-  "scripts": {"appium": "appium --address 127.0.0.1 --log-level warn"},
-  "devDependencies": {"appium": "3.8.0", "appium-uiautomator2-driver": "8.7.0"}
+  "scripts": {
+    "appium": "appium --address 127.0.0.1 --log-level warn",
+    "prepare": "husky",
+    "check:local": "git diff --cached --check && python scripts/summary.py --self-test"
+  },
+  "devDependencies": {
+    "appium": "3.8.0",
+    "appium-uiautomator2-driver": "8.7.0",
+    "husky": "9.1.7"
+  }
 }
